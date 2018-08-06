@@ -20,13 +20,13 @@ function db2Setup(dsn, mode) {
     if (mode=="setup")
     {
         var data=conn.querySync(tabledef);
-    } else if (mode=="sampledata")
+    }/** else if (mode=="sampledata")
     {
       var data=conn.querySync(sampledata);
     } else if (mode=="cleanup")
     {
       var data=conn.querySync(tabledrop);
-    }
+    }*/
     conn.closeSync();
     return {result : data};
  } catch (e) {
